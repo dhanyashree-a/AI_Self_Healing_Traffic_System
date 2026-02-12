@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<net>
+    <node id="N" x="0" y="150"/>
+    <node id="S" x="0" y="-150"/>
+    <node id="E" x="150" y="0"/>
+    <node id="W" x="-150" y="0"/>
+    <node id="C" x="0" y="0" type="traffic_light"/>
+
+    <edge id="N2C" from="N" to="C" priority="1" numLanes="1" speed="13"/>
+    <edge id="S2C" from="S" to="C" priority="1" numLanes="1" speed="13"/>
+    <edge id="E2C" from="E" to="C" priority="1" numLanes="1" speed="13"/>
+    <edge id="W2C" from="W" to="C" priority="1" numLanes="1" speed="13"/>
+
+    <edge id="C2N" from="C" to="N" priority="1" numLanes="1" speed="13"/>
+    <edge id="C2S" from="C" to="S" priority="1" numLanes="1" speed="13"/>
+    <edge id="C2E" from="C" to="E" priority="1" numLanes="1" speed="13"/>
+    <edge id="C2W" from="C" to="W" priority="1" numLanes="1" speed="13"/>
+</net>

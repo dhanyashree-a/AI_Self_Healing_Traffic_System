@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routes>
+
+    <!-- ================= VEHICLE TYPES ================= -->
+
+    <vType id="car"
+           accel="2.6"
+           decel="4.5"
+           length="5"
+           maxSpeed="12"
+           color="0,0,1"/>
+
+    <vType id="emergency"
+           accel="3.5"
+           decel="5.0"
+           length="6"
+           maxSpeed="25"
+           color="1,0,0"
+           vClass="emergency"/>
+
+
+    <!-- ================= ROUTES ================= -->
+
+    <route id="north_south" edges="N2C C2S"/>
+    <route id="south_north" edges="S2C C2N"/>
+    <route id="east_west"  edges="E2C C2W"/>
+    <route id="west_east"  edges="W2C C2E"/>
+
+
+    <!-- ================= TRAFFIC JAM (FLOWS) ================= -->
+
+    <!-- 🔴 HEAVY JAM FROM NORTH -->
+    <flow id="north_jam"
+          type="car"
+          route="north_south"
+          begin="0"
+          end="120"
+          number="70"/>
+
+    <!-- 🟠 MEDIUM JAM FROM EAST -->
+    <flow id="east_jam"
+          type="car"
+          route="east_west"
+          begin="0"
+          end="120"
+          number="45"/>
+
+    <!-- 🟡 LIGHT TRAFFIC FROM SOUTH -->
+    <flow id="south_light"
+          type="car"
+          route="south_north"
+          begin="0"
+          end="120"
+          number="20"/>
+
+    <!-- 🟢 VERY LIGHT FROM WEST -->
+    <flow id="west_light"
+          type="car"
+          route="west_east"
+          begin="0"
+          end="120"
+          number="15"/>
+
+
+    <!-- ================= EMERGENCY VEHICLES ================= -->
+
+    <!-- 🚑 Emergency arrives during peak congestion -->
+    <vehicle id="ambulance1"
+             type="emergency"
+             route="east_west"
+             depart="40"/>
+
+    <vehicle id="ambulance2"
+             type="emergency"
+             route="west_east"
+             depart="75"/>
+
+</routes>
