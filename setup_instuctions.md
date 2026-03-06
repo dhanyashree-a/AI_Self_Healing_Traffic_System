@@ -6,7 +6,7 @@ Download and install **SUMO (Simulation of Urban Mobility)** from the official w
 
 https://www.eclipse.org/sumo/
 
-After installation, add the SUMO `bin` directory to your system **PATH**.
+After installation, add the SUMO `bin` directory to your system PATH.
 
 Example (Windows):
 
