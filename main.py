@@ -80,14 +80,7 @@ def main():
         throughput = traci.simulation.getArrivedNumber()
 
         steps.append(step)
-        waiting_times.append(avg_wait)
-        queue_lengths.append(queue)
-        throughputs.append(throughput)
-
-        # ===================== HOLD CURRENT GREEN =====================
-        if current_green_remaining > 0:
-            current_green_remaining -= 1
-            step += 1
+0
             continue
 
         if 5 < step < 280:
